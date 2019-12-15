@@ -15,10 +15,17 @@
         insert into user(id,name,pwd) values (#{id},#{name},#{pwd});
     </insert>
 
+    <insert id="addUserByMap" parameterType="map" >
+        insert into user(id,name,pwd) values (#{id},#{username},#{password});
+    </insert>
+
     <update id="updateUser" parameterType="com.kuang.pojo.User">
         update user set name=#{name},pwd=#{pwd} where id = #{id};
     </update>
 
+    <update id="updateUserPassword" parameterType="map" >
+        update user set pwd=#{password} where id = #{id}
+    </update>
     <delete id="deleteUserById" parameterType="int">
         delete from user where id = #{id};
     </delete>
