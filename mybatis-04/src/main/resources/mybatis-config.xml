@@ -7,6 +7,10 @@
 
     <properties resource="db.properties"/>
     
+    <settings>
+        <setting name="logImpl" value="LOG4J"/>
+    </settings>
+
     <typeAliases>
         <typeAlias type="com.kuang.pojo.User" alias="User"/>
     </typeAliases>
