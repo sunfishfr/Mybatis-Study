@@ -44,7 +44,7 @@ public class UserMapperTest {
 
         Map<String, Integer> map = new HashMap<>();
 
-        map.put("startIndex",0);
+        map.put("startIndex",1);
         map.put("pageSize",3);
 
         List<User> userList = mapper.getUserByLimit(map);
