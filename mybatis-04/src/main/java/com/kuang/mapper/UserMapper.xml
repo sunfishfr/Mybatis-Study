@@ -13,6 +13,9 @@
         select * from user where id = #{id};
     </select>
 
+    <select id="getUserByLimit" parameterType="map" resultMap="UserResult">
+        select * from mybatis.user limit #{startIndex},#{pageSize};
+    </select>
     <!--
         <select id="getUserById" parameterType="int" resultType="user">
             select id,name,pwd as password from user where id = #{id};
