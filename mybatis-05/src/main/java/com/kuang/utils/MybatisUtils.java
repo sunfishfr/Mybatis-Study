@@ -26,6 +26,6 @@ public class MybatisUtils {
         }
     }
     public static SqlSession getSqlSession(){
-        return sqlSessionFactory.openSession();
+        return sqlSessionFactory.openSession(true);//带参数为true，表示自动提交事务
     }
 }
